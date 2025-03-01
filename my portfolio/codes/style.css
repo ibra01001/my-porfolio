@@ -1,0 +1,505 @@
+* {
+    background-color: #011800;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    /* Yellow border */
+}
+
+.logo span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    z-index: 9999;
+    border-bottom: 2px solid #FFD700;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0.9;
+}
+
+
+/* Add some padding to the body to prevent content from being hidden behind the navbar */
+body {
+    padding-top: 70px;
+    /* Adjust this based on navbar height */
+}
+
+
+
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    /* Adds spacing between items */
+}
+
+.nav-links li {
+    flex: 1;
+    /* Makes all list items equally spaced */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+
+    font-weight: bold;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFD700;
+    /* Adds box around each item */
+    min-width: 120px;
+    /* Ensures all buttons have a minimum size */
+    transition: 0.3s;
+}
+
+.nav-links a {
+    font-size: 1vw;
+}
+
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+
+
+/*  MEDIA QUERY - MOBILE NAVIGATION */
+@media (max-width: 1200px) {
+    .logo {
+        display: none;
+        /* Hide menu by default */
+
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .nav-links,
+    .nav-links li,
+    .nav-links a {
+        flex-wrap: wrap;
+        padding: 0;
+
+
+    }
+
+    .navbar {
+
+
+        justify-content: center;
+        flex-direction: column;
+        display: flexbox;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #011800;
+    /* Adjust as needed */
+    transition: top 0.5s ease-in-out;
+}
+
+.hidden {
+    top: -100px;
+    /* Moves navbar out of view */
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #011800;
+    color: white;
+    border: 1px solid #FFD700;
+}
+
+/* Hero Text */
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    padding-top: 5%;
+}
+
+.hero-text h1 {
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero-text .highlight {
+    color: #FFD700;
+    /* Gold color */
+}
+
+.hero-text p {
+    font-size: 2vw;
+    margin: 20px 0;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    border: 2px solid white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.learn-more {
+    background-color: #FFD700;
+    color: black;
+    border: none;
+}
+
+.learn-more:hover {
+    background-color: white;
+    color: black;
+}
+
+.get-in-touch {
+    border: 2px solid white;
+    color: white;
+}
+
+.get-in-touch:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-left: 1px solid #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .nav-links li a {
+        font-size: 4vw;
+        /* Adjust font size for smaller screens */
+        padding: 10px 15px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+.hero {
+
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+
+    .hidden {
+        top: -400px;
+        /* Moves navbar out of view */
+    }
+
+    .hero-text {
+        border: none;
+
+    }
+
+}
+
+.skills-imgs img {
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+
+}
+
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+.hero-buttons a {
+    font-size: 20px;
+}
+
+.SERVICES {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.SERVICES h1 {
+    color: #FFD700;
+    font-family: "Tourney", serif;
+    display: flex;
+    font-size: 8vh;
+    justify-content: center;
+    transition-duration: 0.3s;
+
+}
+
+.SERVICES h1:hover {
+    font-size: 10vh;
+    opacity: 1;
+}
+
+.SERVICES img {
+    opacity: 0.5;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline;
+    float: none;
+    line-height: 24px;
+    position: static;
+    z-index: auto;
+
+}
+
+@media (max-width:830px) {
+    .SERVICES img {
+        width: 40vh !important;
+
+    }
+
+    .SERVICES {
+        width: 50%;
+
+    }
+
+    .SERVICES h1 {
+        font-size: 3vh !important;
+        display: block !important;
+    }
+
+    .carousel-item active {
+        width: 200vh !important;
+    }
+}
+
+.CONTACT-img {
+    flex: 1;
+}
+
+.CONTACT-img img {
+    width: 100%;
+    border-right: 1px solid #FFD700;
+    border-bottom: 1px solid #FFD700;
+    opacity: 0.5;
+}
+
+#name,
+#email,
+#subject,
+#message {
+    border: 2px white solid;
+    padding: 10px;
+}
+
+form {
+    padding: 10px;
+}
+
+.CONTACT {
+    width: 50%;
+    padding: 20px;
+    background: #011800;
+    border-radius: 8px;
+
+
+}
+
+@media (max-width:1200px) {
+    .CONTACT-img img {
+        display: none;
+    }
+
+    .CONTACT {
+        margin: 0;
+        width: 80%;
+    }
+
+}
+
+
+
+.input-box {
+    padding-top: 5%;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    background: #1c3420;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    background: #1c3420;
+    padding: 10px;
+
+}
+
+.CONTACT button {
+    width: 100%;
+    background: #FFD700;
+    color: black;
+    padding: 10px;
+    border: none;
+
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.CONTACT button:hover {
+    background: white;
+}
+
+.link-c {
+    display: flex;
+    justify-content: start;
+
+}
+
+.social {
+    padding: 2%;
+    font-size: 3vh;
+    list-style-type: none;
+}
+
+.add-info h3 {
+    padding-left: 2%;
+    padding-top: 3%;
+    font-size: 3vh;
+    font-weight: 800;
+}
+
+.copyright {
+    padding: 2%;
+}
+
+.social p {
+    display: inline;
+}
+
+abbr a {
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .social p {
+        display: none;
+    }
+
+    .social {
+        font-size: 3.5vw;
+
+    }
+
+    abbr a {
+        display: inline;
+    }
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    justify-content: start;
+    display: none;
+}
+
+a {
+    color: white;
+}
+
+#discord {
+    color: white;
+    transition-duration: 0.3s;
+    opacity: 0;
+    position: relative;
+    left: -30%;
+
+}
+
+#discord:hover {
+    opacity: 1;
+    left: 2%;
+}
